@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <!-- Vista de conductor -->
+        <record model="ir.ui.view" id="res_partner_form_view_inherited">
+            <field name="name">res.partner.form.view.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Información Adicional">
+                        <group>
+                            <xpath expr="//field[@name='website']" position="after">
+                                <div>
+                                    <label for="dni"/>
+                                    <field name="dni"/>
+                                </div>
+                                <div>
+                                    <label for="alta_contrato"/>
+                                    <field name="alta_contrato"/>
+                                </div>                                
+                                <div>
+                                    <label for="caducidad_dni"/>
+                                    <field name="caducidad_dni"/>
+                                </div>
+                                <div>
+                                    <label for="fechas_carnet_conducir"/>
+                                    <field name="fechas_carnet_conducir"/>
+                                </div>
+                                <div>
+                                    <label for="caducidad_carnet_conducir"/>
+                                    <field name="caducidad_carnet_conducir"/>
+                                </div>
+                                <div>
+                                    <label for="cap_fechas"/>
+                                    <field name="cap_fechas"/>
+                                </div>
+                                <div>
+                                    <label for="reconocimiento_medico"/>
+                                    <field name="reconocimiento_medico"/>
+                                </div>                                
+                                <div>
+                                    <label for="fecha_caducidad_tacografo"/>
+                                    <field name="fecha_caducidad_tacografo"/>
+                                </div>
+                            </xpath>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+        <!-- Acciones del Menú -->        
+        <record model="ir.actions.act_window" id="gestion_flota.conductor_action_window">
+            <field name="name">Conductores</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Conductores" id="gestion_flota.conductor_menu" parent="gestion_flota.menu_root" action="gestion_flota.conductor_action_window"/>
+    </data>
+</odoo>

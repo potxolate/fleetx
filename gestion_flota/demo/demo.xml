@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <record id="vehiculo1" model="gestion_flota.vehiculo">
+            <field name="matricula">3833</field>
+            <field name="tipo">camion</field>
+        </record>
+        <record id="multa1" model="gestion_flota.multa">
+            <field name="referencia">123</field>
+            <field name="tipo">radar</field>            
+        </record>
+    </data>
+</odoo>

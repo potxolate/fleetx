@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <!-- Vista de Vehiculo -->
+        <record model="ir.ui.view" id="gestion_flota.vehiculo_list">
+            <field name="name">gestion_flota.vehiculo.view.tree</field>
+            <field name="model">gestion_flota.vehiculo</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="matricula"/>
+                    <field name="tipo"/>
+                    <field name="fecha_matriculacion"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Acciones del Menú -->
+        <record model="ir.actions.act_window" id="gestion_flota.vehiculo_action_window">
+          <field name="name">Vehiculos</field>
+          <field name="res_model">gestion_flota.vehiculo</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Vehiculos" id="gestion_flota.vehiculo_menu" parent="gestion_flota.menu_root" action="gestion_flota.vehiculo_action_window"/>
+    </data>
+</odoo>

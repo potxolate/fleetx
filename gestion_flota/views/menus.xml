@@ -1,0 +1,6 @@
+<odoo>
+  <data>
+    <!-- Top menu item -->
+    <menuitem name="gestion_flota" id="gestion_flota.menu_root"/>    
+  </data>
+</odoo>

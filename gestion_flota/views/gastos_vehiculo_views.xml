@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista de Gastos Vehiculo -->
+        <record model="ir.ui.view" id="gestion_flota.gastos_vehiculo_list">
+            <field name="name">gestion_flota.gastos.vehiculo.view.tree</field>
+            <field name="model">gestion_flota.gastos.vehiculo</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="invoice_id"/>
+                    <field name="tipo_gasto"/>
+                    <field name="descripcion"/>
+                    <field name="vehiculo_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Acciones del Menú -->
+        <record model="ir.actions.act_window" id="gestion_flota.gastos_vehiculo_action_window">
+          <field name="name">Gastos</field>
+          <field name="res_model">gestion_flota.gastos.vehiculo</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Gastos" id="gestion_flota.gastos_vehiculo_menu" parent="gestion_flota.menu_root" action="gestion_flota.gastos_vehiculo_action_window"/>
+    </data>
+</odoo>
