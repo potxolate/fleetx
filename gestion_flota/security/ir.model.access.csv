@@ -1,4 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_gestion_flota_conductor,access_gestion_flota_conductor,model_gestion_flota_conductor,base.group_user,1,0,0,0
 access_gestion_flota_vehiculo,access_gestion_flota_vehiculo,model_gestion_flota_vehiculo,base.group_user,1,0,0,0
-access_gestion_flota_conductor,access_gestion_flota_conductor,model_gestion_flota_conductor,base.group_user,1,0,0,0
