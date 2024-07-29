@@ -32,9 +32,8 @@ class Vehiculo(models.Model):
             if len(matriculas) > 1:
                 raise ValidationError('Ya existen vehiculos con la  matricula %s'%(self.matricula))
     
-    def name_get(self):
-        res = []
-        for record in self:
-            name = record.matricula            
-            res.append((record.id, name))
-        return res
+    @api.depends('matricula', 'tipo')
+    def _compute_display_name(self):
+        for vehiculo in self:
+            vehiculo.display_name = f"{vehiculo.tipo.capitalize()} - {vehiculo.matricula}"        
+        
