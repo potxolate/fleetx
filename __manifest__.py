@@ -15,6 +15,8 @@
         "account"
     ],
     "data": [
+        "security/fleetx_security.xml",
+        "security/ir.model.access.csv",
         "views/menus.xml",        
         "views/templates.xml",
         "views/orden_carga_views.xml",

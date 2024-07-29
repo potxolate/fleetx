@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_gestion_flota_conductor,access_gestion_flota_conductor,model_gestion_flota_conductor,base.group_user,1,0,0,0
-access_gestion_flota_vehiculo,access_gestion_flota_vehiculo,model_gestion_flota_vehiculo,base.group_user,1,0,0,0
+fleetx.access_fleetx_vehiculo,access_fleetx_vehiculo,fleetx.model_fleetx_vehiculo,base.group_user,1,0,0,0
+fleetx.access_fleetx_gastos_vehiculo,access_fleetx_gastos_vehiculo,fleetx.model_fleetx_gastos_vehiculo,base.group_user,1,0,0,0
+fleetx.access_fleetx_multa,access_fleetx_multa,fleetx.model_fleetx_multa,base.group_user,1,0,0,0
+fleetx.access_fleetx_orden_carga,access_fleetx_orden_carga,fleetx.model_fleetx_orden_carga,base.group_user,1,0,0,0

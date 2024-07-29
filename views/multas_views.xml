@@ -1,9 +1,9 @@
 <odoo>
     <data>
         <!-- Vista de Multas -->
-        <record model="ir.ui.view" id="gestion_flota.multas_list">
-            <field name="name">gestion_flota.multa.view.tree</field>
-            <field name="model">gestion_flota.multa</field>
+        <record model="ir.ui.view" id="fleetx.multas_list">
+            <field name="name">fleetx.multa.view.tree</field>
+            <field name="model">fleetx.multa</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="referencia"/>
@@ -16,11 +16,11 @@
         </record>
 
         <!-- Acciones del Menú -->
-        <record model="ir.actions.act_window" id="gestion_flota.multa_action_window">
+        <record model="ir.actions.act_window" id="fleetx.multa_action_window">
           <field name="name">Multas</field>
-          <field name="res_model">gestion_flota.multa</field>
+          <field name="res_model">fleetx.multa</field>
           <field name="view_mode">tree,form</field>
         </record>
-        <menuitem name="Multas" id="gestion_flota.multa_menu" parent="gestion_flota.menu_root" action="gestion_flota.multa_action_window"/>
+        <menuitem name="Multas" id="fleetx.multa_menu" parent="fleetx.menu_root" action="fleetx.multa_action_window"/>
     </data>
 </odoo>

@@ -1,10 +1,10 @@
 <odoo>
     <data>
-        <record id="vehiculo1" model="gestion_flota.vehiculo">
+        <record id="vehiculo1" model="fleetx.vehiculo">
             <field name="matricula">3833</field>
             <field name="tipo">camion</field>
         </record>
-        <record id="multa1" model="gestion_flota.multa">
+        <record id="multa1" model="fleetx.multa">
             <field name="referencia">123</field>
             <field name="tipo">radar</field>            
         </record>

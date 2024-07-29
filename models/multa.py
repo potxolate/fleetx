@@ -6,7 +6,7 @@ from odoo.exceptions import ValidationError
 
 
 class Multa(models.Model):
-    _name = 'gestion_flota.multa'
+    _name = 'fleetx.multa'
     _description = 'Definir una multa'
 
     referencia = fields.Char(
@@ -28,13 +28,13 @@ class Multa(models.Model):
         default='borrador'
     )
     importe = fields.Float('importe')
-    vehiculo_id = fields.Many2one('gestion_flota.vehiculo', string='Vehiculo')
+    vehiculo_id = fields.Many2one('fleetx.vehiculo', string='Vehiculo')
     conductor_id = fields.Many2one('res.partner', string='Conductor')
 
     @api.constrains('referencia')
     def check_referencia(self):
         if self.referencia and self.referencia != '':
-            multas = self.env['gestion_flota.multa'].search([('referencia','=',self.referencia)])
+            multas = self.env['fleetx.multa'].search([('referencia','=',self.referencia)])
             if len(multas) > 1:
                 raise ValidationError('Ya existen multas con la referencia %s'%(self.referencia))
     

@@ -5,7 +5,7 @@ from odoo import _, api, fields, models
 
 
 class GastosVehiculo(models.Model):
-    _name = 'gestion_flota.gastos.vehiculo'
+    _name = 'fleetx.gastos.vehiculo'
     _description = 'Gastos Vehiculo'
 
     invoice_id = fields.Many2one('account.invoice', string="Invoice")
@@ -15,4 +15,4 @@ class GastosVehiculo(models.Model):
         default='taller'
     )
     descripcion = fields.Text(string='Descripción')
-    vehiculo_id = fields.Many2one('gestion_flota.vehiculo', string='Vehiculo')
+    vehiculo_id = fields.Many2one('fleetx.vehiculo', string='Vehiculo')

@@ -1,26 +1,13 @@
 <odoo>
     <data>
-        <!-- Vista de Multas -->
-        <record model="ir.ui.view" id="gestion_flota.orden_carga_list">
-            <field name="name">gestion_flota.multa.view.tree</field>
-            <field name="model">gestion_flota.orden_carga</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <field name="id"/>
-                    <field name="conductor1_id"/>
-                    <field name="vehiculo1_id"/>
-                    <field name="fecha_carga"/>
-                    <field name="lugar_carga"/>
-                </tree>
-            </field>
-        </record>
+        
 
         <!-- Acciones del Menú -->
-        <record model="ir.actions.act_window" id="gestion_flota.orden_carga_action_window">
+        <record model="ir.actions.act_window" id="fleetx.orden_carga_action_window">
           <field name="name">Ordenes de Carga</field>
-          <field name="res_model">gestion_flota.orden_carga</field>
+          <field name="res_model">fleetx.orden_carga</field>
           <field name="view_mode">tree,form</field>
         </record>
-        <menuitem name="Ordenes de Carga" id="gestion_flota.orden_carga_menu" parent="gestion_flota.menu_root" action="gestion_flota.orden_carga_action_window"/>
+        <menuitem name="Ordenes de Carga" id="fleetx.orden_carga_menu" parent="fleetx.menu_root" action="fleetx.orden_carga_action_window"/>
     </data>
 </odoo>

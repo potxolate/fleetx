@@ -6,7 +6,7 @@ from odoo.exceptions import ValidationError
 
 
 class Vehiculo(models.Model):
-    _name = 'gestion_flota.vehiculo'
+    _name = 'fleetx.vehiculo'
     _description = 'Definir un Vehiculo'
 
     matricula = fields.Char(
@@ -28,7 +28,7 @@ class Vehiculo(models.Model):
     @api.constrains('matricula')
     def check_matricula(self):
         if self.matricula and self.matricula != '':
-            matriculas = self.env['gestion_flota.vehiculo'].search([('matricula','=',self.matricula)])
+            matriculas = self.env['fleetx.vehiculo'].search([('matricula','=',self.matricula)])
             if len(matriculas) > 1:
                 raise ValidationError('Ya existen vehiculos con la  matricula %s'%(self.matricula))
     

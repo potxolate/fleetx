@@ -49,11 +49,11 @@
             </field>
         </record>
         <!-- Acciones del Menú -->        
-        <record model="ir.actions.act_window" id="gestion_flota.conductor_action_window">
+        <record model="ir.actions.act_window" id="fleetx.conductor_action_window">
             <field name="name">Conductores</field>
             <field name="res_model">res.partner</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <menuitem name="Conductores" id="gestion_flota.conductor_menu" parent="gestion_flota.menu_root" action="gestion_flota.conductor_action_window"/>
+        <menuitem name="Conductores" id="fleetx.conductor_menu" parent="fleetx.menu_root" action="fleetx.conductor_action_window"/>
     </data>
 </odoo>

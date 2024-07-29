@@ -1,9 +1,9 @@
 <odoo>
     <data>
         <!-- Vista de Vehiculo -->
-        <record model="ir.ui.view" id="gestion_flota.vehiculo_list">
-            <field name="name">gestion_flota.vehiculo.view.tree</field>
-            <field name="model">gestion_flota.vehiculo</field>
+        <record model="ir.ui.view" id="fleetx.vehiculo_list">
+            <field name="name">fleetx.vehiculo.view.tree</field>
+            <field name="model">fleetx.vehiculo</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="matricula"/>
@@ -14,11 +14,11 @@
         </record>
 
         <!-- Acciones del Menú -->
-        <record model="ir.actions.act_window" id="gestion_flota.vehiculo_action_window">
+        <record model="ir.actions.act_window" id="fleetx.vehiculo_action_window">
           <field name="name">Vehiculos</field>
-          <field name="res_model">gestion_flota.vehiculo</field>
+          <field name="res_model">fleetx.vehiculo</field>
           <field name="view_mode">tree,form</field>
         </record>
-        <menuitem name="Vehiculos" id="gestion_flota.vehiculo_menu" parent="gestion_flota.menu_root" action="gestion_flota.vehiculo_action_window"/>
+        <menuitem name="Vehiculos" id="fleetx.vehiculo_menu" parent="fleetx.menu_root" action="fleetx.vehiculo_action_window"/>
     </data>
 </odoo>
