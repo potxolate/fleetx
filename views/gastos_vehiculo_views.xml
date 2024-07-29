@@ -6,8 +6,7 @@
             <field name="name">fleetx.gastos.vehiculo.view.tree</field>
             <field name="model">fleetx.gastos.vehiculo</field>
             <field name="arch" type="xml">
-                <tree>
-                    <field name="invoice_id"/>
+                <tree>                    
                     <field name="tipo_gasto"/>
                     <field name="descripcion"/>
                     <field name="vehiculo_id"/>

@@ -8,7 +8,8 @@ class GastosVehiculo(models.Model):
     _name = 'fleetx.gastos.vehiculo'
     _description = 'Gastos Vehiculo'
 
-    invoice_id = fields.Many2one('account.invoice', string="Invoice")
+    invoice_id = fields.Many2one('account.move', string='Invoice',
+        ondelete='cascade', index=True)
     tipo_gasto = fields.Selection(
         string='Tipo de Gasto',
         selection=[('taller', 'Parte de taller'), ('ruedas', 'Cambio de ruedas')],
