@@ -8,6 +8,7 @@ from odoo.exceptions import ValidationError
 class Vehiculo(models.Model):
     _name = 'fleetx.vehiculo'
     _description = 'Definir un Vehiculo'
+    _rec_name = 'display_name'
 
     matricula = fields.Char(
         string='Matricula',
@@ -24,6 +25,9 @@ class Vehiculo(models.Model):
     )
     conductor_id = fields.Many2one('res.partner', string='Conductor')
     anotaciones = fields.Text(string='Notas')
+    display_name = fields.Char(
+        compute='_compute_display_name', store=True, string='Vehículo'
+    )
 
     @api.constrains('matricula')
     def check_matricula(self):
@@ -33,7 +37,7 @@ class Vehiculo(models.Model):
                 raise ValidationError('Ya existen vehiculos con la  matricula %s'%(self.matricula))
     
     @api.depends('matricula', 'tipo')
-    def _compute_display_name(self):
+    def _compute_display_name(self):        
         for vehiculo in self:
             vehiculo.display_name = f"{vehiculo.tipo.capitalize()} - {vehiculo.matricula}"        
         

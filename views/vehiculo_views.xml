@@ -6,8 +6,8 @@
             <field name="model">fleetx.vehiculo</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="matricula"/>
-                    <field name="tipo"/>
+                    <field name="display_name"/>
+                    <field name="conductor_id"/>
                     <field name="fecha_matriculacion"/>
                 </tree>
             </field>
